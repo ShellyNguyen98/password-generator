@@ -6,12 +6,10 @@ function writePassword() {
 
 
 
-let passwordLength = promt ('How long do you want your password to be between 8 to 128 characters')
+let passLength = parseInt(prompt('How long do you want your password to be between 8 to 128 characters?'))
 
-  if ( passLength <8 || passLength > 128) {
-    
-    alert('Pick a valid number')
-    
+  if ( passLength < 8 || passLength > 128) {
+    alert('Pick a valid number!')
     return
   }
     
@@ -36,31 +34,30 @@ for (let i = 0; i < passLength; i ++) {
   let pick = Math.floor(Math.random() * 4)
   
   if (pick === 0) {
+
     if (upperConfirm === true) {
-      let change = characters.upperCase[Math.floor(Math.random() + characters.upperCase.length)]
+      let change = characters.upperCase[Math.floor(Math.random() * characters.upperCase.length)]
       password= password + change
     } else {
       i--
     }
-  }
-
-  else if (pick === 1) {
+  } else if (pick === 1) {
     if (lowerConfirm === true) {
-      let change = characters.lowerCase[Math.floor(Math.random() + characters.lowerCase.length)]
+      let change = characters.lowerCase[Math.floor(Math.random() * characters.lowerCase.length)]
       password= password + change
     } else {
       i--
     }
   } else if (pick === 2) {
     if (numberConfirm === true) {
-      let change = characters.numbers[Math.floor(Math.random() + characters.numbers.length)]
+      let change = characters.numbers[Math.floor(Math.random() * characters.numbers.length)]
       password= password + change
     } else {
       i--
     }
   } else {
     if (specialConfirm === true) {
-      let change = characters.specialCase[Math.floor(Math.random() + characters.specialCase.length)]
+      let change = characters.special[Math.floor(Math.random() * characters.special.length)]
       password= password + change
     } else {
       i--
