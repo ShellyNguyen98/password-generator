@@ -8,7 +8,7 @@ function writePassword() {
 
 let passLength = parseInt(prompt('How long do you want your password to be between 8 to 128 characters?'))
 
-  if ( passLength < 8 || passLength > 128) {
+  if ( passLength < 7 || passLength > 129) {
     alert('Pick a valid number!')
     return
   }
