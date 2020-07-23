@@ -1,14 +1,14 @@
 // // Assignment Code
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
-// function writePassword() {
+function writePassword() {
 //   var password = generatePassword();
 //   var passwordText = document.querySelector("#password");
 
 //   passwordText.value = password;
 
-// }
+
 
 
 let passwordLength = promt ('How long do you want your password to be between 8 to 128 characters')
@@ -74,14 +74,13 @@ for (let i = 0; i < passLength; i ++) {
     } else {
       i--
     }
-  }
-
+  } 
 
 
     
     
     
-  
+document.getElementById('password').innerHTML = `${password}` 
 
 
 // Add event listener to generate button
